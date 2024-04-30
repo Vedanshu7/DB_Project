@@ -155,7 +155,7 @@ def add_review(request, book_slug):
             average_rating = sum(ratings) / len(ratings)     
         book.average_rating = average_rating
         book.save()
-        messages.success(request, 'Your review has been added.')
+        #messages.success(request, 'Your review has been added.')
         return redirect('single_book', single_book_slug=book_slug)
 
 @login_required(login_url="/login")

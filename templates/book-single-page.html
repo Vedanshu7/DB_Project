@@ -61,7 +61,7 @@ color: #ffcc00; /* Color for hovered stars */
 
 
   </script>
-  <title>Buy {{ book.title }} by {{ book.author }}</title>
+  <title>Buy {{ book.title }} by {{ book.author_names }}</title>
   <section>
     <div class="container" style="padding-top:60px; padding-bottom:20px;">
       <div class="row">
@@ -230,7 +230,7 @@ color: #ffcc00; /* Color for hovered stars */
                             <div class="form-group">
                               <label for="update_rating">Update Rating:</label>
                               <div class="rating">
-                                {% for i in '12345' %}
+                                {% for i in '54321' %}
                                   <input type="radio"
                                          id="update-rating-{{ i }}"
                                          name="update_rating"
@@ -271,26 +271,26 @@ color: #ffcc00; /* Color for hovered stars */
                       <label for="rating">Rating:</label>
                       <div class="rating">
                         <div class="rating">
-                          
-                          <input type="radio" id="rating-1" style="display: none;" name="rating" value="1">
-                          <label for="rating-1">
+                          <input type="radio" id="rating-5" style="display: none;" name="rating" value="5">
+                          <label for="rating-5">
                           </label>
-
+                          <input type="radio" id="rating-4" style="display: none;" name="rating" value="4">
+                          <label for="rating-4">
+                          </label>
+                          
+                          <input type="radio" id="rating-3" style="display: none;" name="rating" value="3">
+                          <label for="rating-3">
+                          </label>
+                       
+                         
                           <input type="radio" id="rating-2" style="display: none;" name="rating" value="2">
                           <label for="rating-2">
                           </label>
 
-                          <input type="radio" id="rating-3" style="display: none;" name="rating" value="3">
-                          <label for="rating-3">
+                          <input type="radio" id="rating-1" style="display: none;" name="rating" value="1">
+                          <label for="rating-1">
                           </label>
-
-                          <input type="radio" id="rating-4" style="display: none;" name="rating" value="4">
-                          <label for="rating-4">
-                          </label>
-
-                          <input type="radio" id="rating-5" style="display: none;" name="rating" value="5">
-                          <label for="rating-5">
-                          </label>
+                          
                         </div>
                       </div>
                       <div class="form-group">

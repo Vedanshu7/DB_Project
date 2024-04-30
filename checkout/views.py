@@ -169,7 +169,7 @@ def checkout_req(request):
             cart.delete()
             # decreasing stock
             stocks_now = Book.objects.get(book_id=item.book_id)
-            stocks_now.stocks = stocks_now.stocks-1
+            stocks_now.stocks_available = stocks_now.stocks_available-quantity
             stocks_now.save()
             messages.success(request,"Your order has been successfully received.")
             return redirect("orders")

@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+{%block content%}
+<title> Contact Us</title>
+<div class="container contact-form" style="margin-top:80px;">
+    <h1 class="default-style text-center">Contact form</h1>
+	<hr>
+
+	<div class="row">
+
+       <div class="col-md-4 text-center">
+           <div class=""><div class="text-center">
+        <img class="pt-20" height="150px" width="150px" src="/static/images/logo.png" style="padding-bottom:28px;"></div>
+               <p class="contact-details"><b>Address: Fort Wayne, USA 46815.</b></p>
+               <p class="contact-details"><b>Email: joshvr01@pfw.edu</b></p>
+           </div>
+       </div>
+
+       <div class="col-md-6">
+
+         <div class="form-group">
+         	<label>Your Name</label>
+         	<input type="text" class="form-control">
+         </div>
+
+         <div class="form-group">
+         	<label>Email</label>
+         	<input type="text" class="form-control">
+         </div>
+
+         <div class="form-group">
+         	<label>Massage</label>
+         	<textarea  class="form-control" rows="7"></textarea>
+         </div>
+
+         <div class="form-group">
+         	<button class="btn btn-primary btn-block">Send Message</button>
+         </div>
+
+       </div>
+
+    </div></div>
+
+{%endblock content%}
+

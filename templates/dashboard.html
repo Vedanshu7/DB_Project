@@ -1,0 +1,85 @@
+{%extends 'dashboard-base.html'%}
+{%load static%}
+
+{%block content%}
+
+ <div class="row" >
+{%include 'dashboard-menu.html'%}
+ <div class="tab-content col-9 " style="margin-top:60px;margin-left:30px;margin-right:20px">
+      <div class="col-md-12" style="margin-top:20px;margin-bottom:30px;" >
+    {%include 'messages.html'%} </div>
+<h3 class="default-style"> User Dashboard </h3><hr>
+
+ <div class="row">
+         <div class="col-12 col-md-3 mb-sm-2"><a href="/dashboard/orders">
+            <div class="card dashboard-card" style="background:url(/static/images/dashboard-card.png)">
+                <div class="row align-items-center"><div class="col"><i class="fa fa-user fa-dashboard"></i></div>
+                   <div class="col dashboard-col-total"> Total Orders</h5>
+                    <div class="card-dashboard-col-total-number"> {%if total_orders <= 0%}
+                        0
+                        {%else%}
+                        {{total_orders}}
+                        {%endif%}</div> </div> </div>
+             </div></a></div>
+
+      <div class="col-12 col-md-3 mb-sm-2"><a href="/dashboard/orders">
+            <div class="card dashboard-card" style="background:url(/static/images/dashboard-card.png)">
+                <div class="row align-items-center"><div class="col"><i class="fa fa-truck fa-dashboard"></i></div>
+                   <div class="col dashboard-col-total"> Delivered Orders </h5>
+                    <div class="card-dashboard-col-total-number">
+                       {%if dilevered_orders <= 0%}
+                        0
+                        {%else%}
+                        {{dilevered_orders}}
+                        {%endif%}
+                    </div> </div> </div>
+            </div></a></div>
+
+      <div class="col-12 col-md-3 mb-sm-2">
+            <div class="card dashboard-card" style="background:url(/static/images/dashboard-card.png)">
+                <div class="row align-items-center"><div class="col"><i class="fa fa-user fa-dashboard"></i></div>
+                   <div class="col dashboard-col-total"> Registered on </h5>
+                    <div class="card-dashboard-col-total-number"> {{registered_on}} </div> </div> </div>
+             </div></div>
+
+     <div class="col-12 col-md-3 mb-sm-2">
+            <div class="card dashboard-card" style="background:url(/static/images/dashboard-card.png)">
+                <div class="row align-items-center"><div class="col"><i class="fa fa-user fa-dashboard"></i></div>
+                   <div class="col dashboard-col-total">Last Login Date</h5>
+                    <div class="card-dashboard-col-total-number"> {{last_login}} </div> </div> </div>
+             </div></div>
+
+            </div>
+
+
+
+
+
+     <p class="default-style" style="margin-top:30px">You recent orders (last 4)</p>
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Order ID</th>
+      <th scope="col">Status</th>
+      <th scope="col">Date Created</th>
+      <th scope="col">Order Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {%for order in order_id_list%}
+
+      <th scope="row">{{order.order_id}}</th>
+      <td>{{order.order_status}}</td>
+      <td>{{order.date_created}}</td>
+      <td><a href="/dashboard/view_order/{{order.order_id}}"> View Order</a></td>
+    </tr>
+  {%endfor%}
+
+  </tbody>
+      </table>
+
+</div>
+
+
+{%endblock content%}

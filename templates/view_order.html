@@ -1,0 +1,80 @@
+{% extends 'dashboard-base.html' %}
+{% load static %}
+{% block content %}
+  <div class="row">
+    {% include 'dashboard-menu.html' %}
+    <div class="tab-content col-9 "
+         style="margin-top:60px;
+                margin-left:30px;
+                margin-right:20px">
+      <h3 class="default-style">Order # {{ order_id }}</h3>
+      <hr>
+      <div class="col-6">
+        <div class="row">
+          {{ request.user.first_name }}
+          {{ request.user.last_name }}
+          <br>
+          Mobile: {{ request.user.phone }}
+          <br>
+          Email: {{ request.user.email }}
+          <br>
+        </div>
+        <div class="row">
+          Delivery Address: {{ full_address }}
+          <br>
+        </div>
+        <p class="text-center text-green">
+          <b>Order Details</b>
+        </p>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Price Per item</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {% for order in order_items_list %}
+                <th scope="row">{{ order.order_item.title }}</th>
+                <td>{{ order.order_item.price }}</td>
+                <td>{{ order.order_quantity }}</td>
+                <td>{{ order.order_price }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <p class="text-center text-green">
+          <b>Invoice Details</b>
+        </p>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">invoice id</th>
+              <th scope="col">Total</th>
+              <th scope="col">Payment Method</th>
+              <th scope="col">Transaction No</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {% for invoice in invoice_list %}
+                <th scope="row">{{ invoice.invoice_id }}</th>
+                <td>{{ invoice.total_price }}</td>
+                <td>{{ invoice.transaction_method }}</td>
+                <td>{{ invoice.transaction_id }}</td>
+                <td>{{ invoice.invoice_status }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+{% endblock content %}
+</html>

@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+  <div class="container" style="margin-top:80px;">
+
+      <div class="col-md-12" style="margin-top:20px;margin-bottom:20px;" >
+    {%include 'messages.html'%} </div>
+
+          <h3 class="default-style"> Checkout Portal</h3><hr>
+                <p class="default-style"> Please fill up the form the complete your order</p>
+
+<form action="checkout_req/process" method="POST">
+    {% csrf_token %}
+    <meta charset="UTF-8">
+    <p class="default-style register-infos text-left"> <b>Delivery Info</b> </p>
+  <div class="form-group col-md-6">
+    <label for="first_name">First Name</label>
+    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Enter your first name">
+   </div>
+
+<div class="form-group col-md-6">
+    <label for="first_name">Last Name</label>
+    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Enter your last name">
+   </div>
+
+  <div class="form-group col-md-6">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" name="address" id="address" placeholder="Enter Street Address">
+  </div>
+<div class="form-group col-md-6">
+    <label for="city">City</label>
+    <input type="text" class="form-control" name="city" id="city" placeholder="Enter Your city ">
+  </div>
+      <div class="form-group col-md-6">
+    <label for="division">Division</label>
+    <input type="text" class="form-control"  name="division" id="division" placeholder="Enter Your Division ">
+  </div>
+     <div class="form-group col-md-6">
+    <label for="division">Zip Code</label>
+    <input type="text" class="form-control" name="zip" id="zip" placeholder="Enter Your Zip Code ">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="country">Country</label>
+    <input type="text" class="form-control" name="country" id="country" placeholder="Enter Your Country">
+  </div>
+
+ <p class="default-style register-infos text-left pt-3"> <b>Payment Information</b> </p>
+
+      <p class="register-infos"> Our Bkash Number: 0184XXXXXXXX</p>
+
+  <div class="form-group col-md-6">
+    <label for="order_note">Bkash Payment </label>
+    <input type="text" class="form-control"  name="transaction_id" id="transaction_id" placeholder="Your bkash Transaction Id">
+      <input type="text" class="form-control"  name="order_note" id="order_note" placeholder="Order Note(If any)">
+      <button class="btn btn-primary" type="submit"> Submit </button>
+  </div>
+</form>
+      </div></div>
+{%endblock content%}

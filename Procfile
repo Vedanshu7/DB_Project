@@ -1,1 +1,1 @@
-web: gunicorn boihut.wsgi
+web: gunicorn app.wsgi

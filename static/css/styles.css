@@ -470,13 +470,13 @@ div.book-cart-price, div.book-cart-price, div.book-quantity, div.book-cart-total
     font-size: 18px;
 }
 
-.boihut-book-checkout-button{
+.app-book-checkout-button{
     height: 34px;
     width: 55px;
     padding-left: 20px;
 
 }
-.boihut-custom-btn-update{
+.app-custom-btn-update{
 
 margin-top:28px;
 background: grey;
@@ -487,7 +487,7 @@ font-size:14px;
 color:#e3e3e3;
 }
 
-.boihut-custom-btn-remove{
+.app-custom-btn-remove{
 margin-top:28px;
 background: #3a3939 ;
     height: 39px;
@@ -500,7 +500,7 @@ color: white;
 font-size:14px;
 }
 
-.boihut-checkout-card{
+.app-checkout-card{
 
 background: white;
 color: #222222;
@@ -511,7 +511,7 @@ padding: 24px;
 
 }
 
-h4.boihut-h4-checkout{
+h4.app-h4-checkout{
 
 
     border: 1px solid lightgrey;
@@ -520,7 +520,7 @@ h4.boihut-h4-checkout{
     padding: 13px;
 
 }
-.boihut-checkout-btn{
+.app-checkout-btn{
 
     margin-top: 15px;
     padding: 10px;
@@ -530,7 +530,7 @@ h4.boihut-h4-checkout{
     font-weight: 600;
 }
 
-.boihut-checkout-continue{
+.app-checkout-continue{
     margin-top: 30px;
     padding: 10px;
     font-size: 17px;
@@ -541,7 +541,7 @@ h4.boihut-h4-checkout{
 }
 
 
-.boihut-dashboard-menu-list.active{
+.app-dashboard-menu-list.active{
     z-index: 2;
     color: #ffffff;
     background-color: #3e3e3e;
@@ -553,7 +553,7 @@ h4.boihut-h4-checkout{
 }
 
 
-.boihut-dashboard-menu-list {
+.app-dashboard-menu-list {
     z-index: 2;
     color: #fff;
     background-color: #525252;
@@ -567,7 +567,7 @@ h4.boihut-h4-checkout{
     color:#FFFFFF
 }
 
-.boihut-favorite{
+.app-favorite{
  color:#71C838;
 
 }
@@ -795,13 +795,13 @@ line-height: 20px;
 color: #222222
 }
 
-boihut-book-addnow-input{
+app-book-addnow-input{
 width: 141.89px;
 height: 46.98px;
 
 }
 
-.boihut-addnow-btn {
+.app-addnow-btn {
 
     color: white;
     font-weight: 500;

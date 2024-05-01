@@ -1,7 +1,7 @@
 Django==3.2.25
 django-mathfilters==1.0.0
 regex==2020.11.13
-requests==2.25.1
+requests==2.31.0
 Pillow==10.3.0
 whitenoise==6.0.0
 

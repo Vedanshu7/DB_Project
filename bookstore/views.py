@@ -179,7 +179,7 @@ def edit_review(request, book_slug, review_id):
         book.average_rating = average_rating
         book.save()
         
-        messages.success(request, 'Your review has been updated.')
+        #messages.success(request, 'Your review has been updated.')
         return redirect('single_book', single_book_slug=book_slug)
 
 @login_required(login_url="/login")
@@ -196,7 +196,7 @@ def delete_review(request, book_slug, review_id):
             average_rating = sum(ratings) / len(ratings)    
         book.average_rating = average_rating
         book.save()
-        messages.success(request, 'Your review has been deleted.')
+        #messages.success(request, 'Your review has been deleted.')
         return redirect('single_book', single_book_slug=book_slug)
 
 @login_required(login_url="/login")
@@ -209,7 +209,7 @@ def add_comment(request, book_slug):
         comment = Comment(comment_id= uuid.uuid4(),book=book, user=user, comment_text=comment_text,comment_date = datetime.now().date())
         comment.save()
 
-        messages.success(request, 'Your comment has been added.')
+        ##messages.success(request, 'Your comment has been added.')
         return redirect('single_book', single_book_slug=book_slug)
 
 @login_required(login_url="/login")
@@ -222,7 +222,7 @@ def edit_comment(request, book_slug, comment_id):
         comment.comment_text = comment_text
         comment.save()
 
-        messages.success(request, 'Your comment has been updated.')
+        #messages.success(request, 'Your comment has been updated.')
         return redirect('single_book', single_book_slug=book_slug)
 
 @login_required(login_url="/login")
@@ -231,7 +231,7 @@ def delete_comment(request, book_slug, comment_id):
 
     if request.method == 'POST':
         comment.delete()
-        messages.success(request, 'Your comment has been deleted.')
+        #messages.success(request, 'Your comment has been deleted.')
         return redirect('single_book', single_book_slug=book_slug)
 
 

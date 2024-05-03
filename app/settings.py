@@ -90,7 +90,25 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    'mysql': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',  # Or your MySQL host
+        'PORT': '3306',  # Or your MySQL port
+    },
+}
+
+MONGODB_DATABASES = {
+    'default': {
+        'NAME': 'db',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',  # Or your MongoDB host
+        'PORT': 27017,  # Or your MongoDB port
+    },
 }
 
 
